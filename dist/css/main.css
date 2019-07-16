@@ -1,0 +1,233 @@
+* {
+  line-height: 140%;
+  text-decoration: none;
+  color: #2d3436;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; }
+
+.vr {
+  width: 1px;
+  background: #55efc4; }
+
+.item-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 50px 10px 50px;
+  margin-bottom: 10px; }
+
+nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  nav #nav-branding {
+    padding: 17px;
+    margin-left: 50px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #55efc4; }
+  nav ul {
+    padding: 30px;
+    text-decoration: none;
+    margin-right: 50px; }
+    nav ul li {
+      padding: 10px;
+      display: inline;
+      list-style: none;
+      font-weight: 500; }
+
+main h1 {
+  font-weight: 300;
+  font-size: 48px; }
+
+main #center {
+  height: 100vh;
+  width: 100%;
+  background-position: 0 50%;
+  display: grid;
+  grid-template-areas: "img title";
+  grid-template-columns: 1fr 1fr; }
+  main #center-underlay {
+    position: absolute;
+    top: calc(50vh - 75px);
+    z-index: -100;
+    width: 100%;
+    height: 1px;
+    height: 150px;
+    background: #55efc4; }
+  main #center-img, main #center-titles {
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center; }
+  main #center-img {
+    grid-area: "img"; }
+    main #center-img img {
+      height: 350px;
+      width: 350px;
+      border-radius: 50%;
+      border: 20px solid #55efc4;
+      object-fit: cover; }
+  main #center-titles {
+    grid-area: "title"; }
+    main #center-titles-bg {
+      background: #3eedbc;
+      height: 150px;
+      width: 100%; }
+      main #center-titles-bg h1, main #center-titles-bg h3 {
+        color: white;
+        width: 100%;
+        padding: 1vh;
+        text-align: center; }
+      main #center-titles-bg h1 {
+        margin-top: 30px;
+        font-size: 32px; }
+      main #center-titles-bg h3 {
+        font-weight: 500; }
+
+main .about {
+  width: 100%;
+  background: #fbfbfb;
+  padding: 50px 0; }
+  main .about-title {
+    text-align: center;
+    margin-bottom: 60px; }
+  main .about-card-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  main .about-card {
+    background: white;
+    height: 450px;
+    width: 300px;
+    border-radius: 25px;
+    border: 2px solid #55efc4;
+    margin: 15px; }
+    main .about-card .about-icon {
+      width: 100%;
+      text-align: center; }
+      main .about-card .about-icon ion-icon {
+        font-size: 140px;
+        margin: 20px 0;
+        color: #55efc4; }
+    main .about-card .about-des {
+      width: 80%;
+      margin: 10%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px; }
+
+main #portfolio {
+  width: 85%;
+  padding: 3% 7.5%; }
+  main #portfolio-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%; }
+  main #portfolio .portfolio-item {
+    display: flex;
+    justify-content: center;
+    height: 200px; }
+    main #portfolio .portfolio-item .item-img {
+      overflow: hidden;
+      margin: 0 30px;
+      width: 350px; }
+      main #portfolio .portfolio-item .item-img img {
+        height: 200px;
+        object-fit: contain;
+        overflow: hidden; }
+    main #portfolio .portfolio-item .item-des {
+      margin: 0 30px;
+      width: 600px;
+      background: #fbfbfb;
+      text-align: start; }
+      main #portfolio .portfolio-item .item-des p {
+        margin: 10px 50px 10px 50px; }
+
+footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background: #55efc4; }
+  footer #footer-content {
+    text-align: center;
+    width: 60%; }
+    footer #footer-content h2, footer #footer-content h4, footer #footer-content ion-icon {
+      color: white; }
+    footer #footer-content h2 {
+      margin: 50px 0 10px 0;
+      font-size: 48px;
+      font-weight: 400; }
+    footer #footer-content h4 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: 400; }
+    footer #footer-content ul {
+      text-align: center;
+      display: inline; }
+      footer #footer-content ul li {
+        display: inline;
+        margin: 0px 20px 50px 0px; }
+        footer #footer-content ul li ion-icon {
+          font-size: 48px;
+          margin-bottom: 40px; }
+
+@media screen and (max-width: 960px) {
+  main #center {
+    height: auto;
+    grid-template-areas: "img" "title";
+    grid-template-columns: 1fr;
+    grid-auto-rows: 400px 200px; }
+    main #center-underlay {
+      visibility: hidden; }
+    main #center-titles {
+      justify-content: flex-start; }
+      main #center-titles-bg {
+        height: 200px; }
+    main #center img {
+      margin-top: 80px;
+      height: 200px;
+      width: 200px; }
+  main #portfolio .portfolio-item {
+    flex-direction: column;
+    height: auto; }
+    main #portfolio .portfolio-item .item-img, main #portfolio .portfolio-item .item-des {
+      width: 100%;
+      margin: 20px 0;
+      height: auto; }
+    main #portfolio .portfolio-item .item-des p, main #portfolio .portfolio-item .item-title {
+      margin-right: 20px;
+      margin-left: 20px; }
+    main #portfolio .portfolio-item img {
+      width: 100%;
+      height: auto; }
+    main #portfolio .portfolio-item .vr {
+      width: 100%;
+      height: 1px; }
+  footer #footer-content {
+    width: 90%; } }
+
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: center; }
+    nav #nav-branding {
+      margin-left: 0; }
+    nav ul {
+      display: none;
+      visibility: hidden; }
+  main #center-titles h1 {
+    font-size: 26px; }
+  main #center-titles h3 {
+    font-size: 16px; }
+  main .about-card {
+    height: 350px;
+    width: 250px; }
+    main .about-card ion-icon {
+      font-size: 110px; }
+    main .about-card .about-des {
+      font-size: 16px;
+      margin-top: 0; } }
