@@ -21,7 +21,8 @@ nav {
   position: absolute;
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background: white; }
   nav #nav-branding {
     padding: 17px;
     margin-left: 50px;
@@ -45,7 +46,9 @@ main h1 {
 main #center {
   height: 100vh;
   width: 100%;
-  background-position: 0 50%;
+  background: url("../img/bg-filler.png");
+  background-size: 18%;
+  background-repeat: repeat;
   display: grid;
   grid-template-areas: "img title";
   grid-template-columns: 1fr 1fr; }
@@ -69,13 +72,16 @@ main #center {
       width: 350px;
       border-radius: 50%;
       border: 20px solid #55efc4;
-      object-fit: cover; }
+      object-fit: cover;
+      z-index: 1; }
   main #center-titles {
     grid-area: "title"; }
     main #center-titles-bg {
       background: #3eedbc;
       height: 150px;
-      width: 100%; }
+      width: 150%;
+      position: absolute;
+      z-index: 0; }
       main #center-titles-bg h1, main #center-titles-bg h3 {
         color: white;
         width: 100%;
@@ -131,14 +137,19 @@ main #portfolio {
   main #portfolio .portfolio-item {
     display: flex;
     justify-content: center;
-    height: 200px; }
+    height: auto;
+    margin: 50px 0px; }
     main #portfolio .portfolio-item .item-img {
       overflow: hidden;
       margin: 0 30px;
-      width: 350px; }
+      min-width: 350px;
+      text-align: center; }
       main #portfolio .portfolio-item .item-img img {
-        height: 200px;
+        display: inline-block;
+        max-height: 350px;
+        width: 350px;
         object-fit: contain;
+        object-position: center;
         overflow: hidden; }
     main #portfolio .portfolio-item .item-des {
       margin: 0 30px;
@@ -146,7 +157,14 @@ main #portfolio {
       background: #fbfbfb;
       text-align: start; }
       main #portfolio .portfolio-item .item-des p {
-        margin: 10px 50px 10px 50px; }
+        padding: 16px;
+        padding-bottom: 32px;
+        margin: 10px 50px 10px 50px;
+        text-justify: auto; }
+      main #portfolio .portfolio-item .item-des h2 {
+        padding: 16px;
+        padding-top: 16px;
+        padding-bottom: 0px; }
 
 footer {
   margin-top: 20px;
@@ -187,7 +205,8 @@ footer {
     main #center-titles {
       justify-content: flex-start; }
       main #center-titles-bg {
-        height: 200px; }
+        height: 200px;
+        position: relative; }
     main #center img {
       margin-top: 80px;
       height: 200px;
@@ -197,7 +216,7 @@ footer {
     height: auto; }
     main #portfolio .portfolio-item .item-img, main #portfolio .portfolio-item .item-des {
       width: 100%;
-      margin: 20px 0;
+      margin: 50px 0;
       height: auto; }
     main #portfolio .portfolio-item .item-des p, main #portfolio .portfolio-item .item-title {
       margin-right: 20px;
