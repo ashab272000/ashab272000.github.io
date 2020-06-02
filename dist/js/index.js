@@ -91,7 +91,7 @@ const main = () => {
             had to recreate a website(www.irishwrecksonline.com) is the which
             does not have a good design. I still didn't upload the file in github.
             But the link will be here soon.`,
-            "img/website.JPG",
+            "img/irishwebsite.png",
         )
     ]
 
