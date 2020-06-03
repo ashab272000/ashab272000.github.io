@@ -153,7 +153,6 @@ main #portfolio {
         overflow: hidden; }
     main #portfolio .portfolio-item .item-des {
       margin: 0 30px;
-      width: 600px;
       background: #fbfbfb;
       text-align: start; }
       main #portfolio .portfolio-item .item-des p {
@@ -218,6 +217,8 @@ footer {
       width: 100%;
       margin: 50px 0;
       height: auto; }
+    main #portfolio .portfolio-item .item-des {
+      margin: 0px; }
     main #portfolio .portfolio-item .item-des p, main #portfolio .portfolio-item .item-title {
       margin-right: 20px;
       margin-left: 20px; }
@@ -249,4 +250,12 @@ footer {
       font-size: 110px; }
     main .about-card .about-des {
       font-size: 16px;
-      margin-top: 0; } }
+      margin-top: 0; }
+  main #portfolio-title {
+    word-wrap: break-word; }
+  main #portfolio .portfolio-item .item-img {
+    min-width: 200px; }
+    main #portfolio .portfolio-item .item-img img {
+      width: 200px; }
+  main #portfolio .portfolio-item .item-des p, main #portfolio .portfolio-item .item-des h2 {
+    word-wrap: break-word; } }
